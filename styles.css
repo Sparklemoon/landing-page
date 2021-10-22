@@ -21,3 +21,31 @@ h3,
 p {
     margin: 0;
 }
+
+.container {
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color:var(--clr-text, white);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    padding: .5em 1.25em;
+    background: var(--clr-accent, blue);
+    border-radius: .25em;
+    transition: 
+        transform 250ms ease-in-out,
+        opacity 175ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
