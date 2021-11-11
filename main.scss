@@ -22,10 +22,18 @@ p {
     margin: 0;
 }
 
+section {
+    padding: 7em 0
+}
+
 .container {
     width: 85%;
     max-width: 65em;
     margin: 0 auto;
+}
+
+.spacing > * + * {
+    margin-top: var(--spacer, 2rem)
 }
 
 .btn {
@@ -57,7 +65,11 @@ p {
 
 }
 
-.section-title {}
+.section-title {
+    text-align: center;
+    font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+    line-height: 1;
+}
 
 .hero {
     color: white;
@@ -65,11 +77,16 @@ p {
     background: #222;
     // background-color: #222;
 
-    @supports(background-blend-mode: multiply);
+    @supports(background-blend-mode: multiply) {
     padding: 15em 0;
-    background-image: url(..img/shoe-4.png.jpg),
-    radial-gradient(#444, #111);
-    
+    background: url(..img/shoe-4.png.jpg),
+        radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: center center;
+
+}
     // background-size: 10%
 
 }
