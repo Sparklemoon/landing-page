@@ -34,8 +34,10 @@ section {
 
 .split {
     display: flex;
-    flex-wrap: wrap;
     gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+   
     & > * {
         flex-basis: 30%;
         min-width: 15em;
@@ -80,6 +82,7 @@ section {
     font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
     line-height: 1;
     color: #17353d;
+    margin-bottom: 3rem;
 }
 
 .hero {
@@ -101,9 +104,34 @@ section {
     background-repeat: no-repeat;
     background-position-y: center center;
 
+    }
 }
-    
 
+.featured {
+    background: #eee;
+
+    &__item {
+        display: block;
+        position: relative;
+        transform: scale(.85);
+        transition: transform 250ms ease-in-out;
+
+        &:hover,
+        &:focus {
+            transform: scale(1);
+        }
+
+        &::after {
+            content:'';
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            padding: 100% 100% 0 0;
+            border-radius: 50%;
+            background: #2193b0;
+            z-index: -1;
+        }
+    }
 }
 
 
