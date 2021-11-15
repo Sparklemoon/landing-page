@@ -1,12 +1,12 @@
-// *,
-// *::before,
-// *::after {
-//     box-sizing: border-box;
-// }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
-    // font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.6;
 }
 
@@ -115,6 +115,9 @@ section {
         position: relative;
         transform: scale(.85);
         transition: transform 250ms ease-in-out;
+        text-decoration: none;
+        color: #333;
+        text-align: center;
 
         &:hover,
         &:focus {
