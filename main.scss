@@ -158,7 +158,7 @@ section {
 }
 
 
-.products {
+.product {
     background: radial-gradient(var(--clr-inner,linegree), var(--clr-outer, purple));
     padding: 3em 0;
     border-radius: 3em;
@@ -173,6 +173,21 @@ section {
 
     }
 
+    &__image {
+        margin: -5em 0 0 0;
+    }
+
+    @media (min-width: 45em) {
+      &__image {
+        float: right;
+        width: 50%;
+    }
+    }
+
+}
+
+.hero {
+    --clr-accent: #faa700;
 }
 
 .shoe-red {
