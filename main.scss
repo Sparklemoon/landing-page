@@ -166,7 +166,7 @@ section {
     text-align: center;
 
     &__title {
-        font-size: 4rem;
+        font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
         line-height: 1.1;
         color: #fff;
         text-shadow: 0 0 .2em rgba(#000, 2);
@@ -178,9 +178,21 @@ section {
     }
 
     @media (min-width: 45em) {
+      text-align: left;
+      margin-bottom: 9em;
+  
+      &__title {
+          margin:0;
+      }
+
+
       &__image {
         float: right;
-        width: 50%;
+        width: 65%;
+        // outline: 2px solid red;
+        shape-outside: url(..img/shoe-1.png);
+        shape-margin: 1em;
+        margin: 0 -5em 0 0;
     }
     }
 
